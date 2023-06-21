@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed z-50 w-full mx-auto">
-      <div className="bg-gray-100 py-2 shadow-lg ">
+      <div className="bg-gray-100 bg-opacity-90 py-2 shadow-lg ">
     <div className=" relative flex justify-between items-center px-4 container">
       {/* logo section */}
       <Link to="/" className="inline-flex items-center my-3 ms-8">

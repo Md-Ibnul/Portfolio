@@ -1,0 +1,128 @@
+.pro-header{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    position: relative;
+}
+.pro-header::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    width: 60px;
+    height: 3px;
+    background: #000;
+}
+.project-site{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-image: url(../../assets/Fluengo.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 5s ease-in-out;
+}
+.project-site:hover{
+    background-position: bottom;
+}
+.project-site2{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-image: url(../../assets/ToyVerse.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 5s ease-in-out;
+}
+.project-site2:hover{
+    background-position: bottom;
+}
+.project-site3{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background-image: url(../../assets/Ranna.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 5s ease-in-out;
+}
+.project-site3:hover{
+    background-position: bottom;
+}
+
+/* CSS */
+.tools-name{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.tools-name:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.tools-name:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}

@@ -8,8 +8,8 @@ import crown from '../../assets/crown.png'
 const About = () => {
     return (
         <div className='my-container'>
-            <div className='md:flex items-center'>
-                <div className='w-1/2 about-left'>
+            <div className='flex flex-col-reverse md:flex-row items-center'>
+                <div className='w-full  md:w-1/2 about-left mt-10 md:mt-0'>
                     <div className='glasses'>
                     <img className='w-20' src={glasses} alt="Emoji" />
                     </div>
@@ -27,10 +27,10 @@ const About = () => {
                         <p className='font-Montserrat font-bold text-lg'>Web Developer</p>
                     </div>
                 </div>
-                <div className='w-1/2 left-line'>
-                    <div className='ms-20'>
+                <div className='w-full md:w-1/2 left-line'>
+                    <div className='md:ms-20 ms-5'>
                     <div className="short-line"></div>
-                    <h4 className='heading font-Gilroy uppercase mb-4'>About Me 🧑</h4>
+                    <h4 className='about-heading font-Gilroy uppercase mt-2 mb-4'>About Me 🧑</h4>
                     <p className='font-Montserrat text-lg text-gray-600'>I am a passionate <span className='text-green-800'>MERN Developer</span> with a desire to learn and grow in a collaborative team environment. As a junior MERN Developer, I have a strong grasp of HTML5, CSS3, React.js, Node.js, Express.js, MongoDB, Firebase, and other robust tools, libraries and frameworks. This allows me to develop seamless and efficient web applications for an enhanced user experience. I stay up-to-date with the latest industry trends by exploring cutting-edge technologies like Next.js, TypeScript. By continuously expanding my skill set, I ensure I can deliver innovative solutions.</p>
                     <div className='text-center mt-4'>
                         <button className='my-btn font-Montserrat'>See Resume</button>

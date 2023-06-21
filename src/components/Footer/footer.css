@@ -1,0 +1,62 @@
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    background-color: #3E606F;
+    overflow: hidden;
+}
+
+    .footer::before,
+    .footer::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      min-width: 300vw;
+      min-height: 300vw;
+      background-color: #FCFFF5;
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    
+    .footer::before {
+      bottom: 15vh;
+      border-radius: 45%;
+      animation-duration: 10s;
+    }
+    
+    .footer::after {
+      bottom: 12vh;
+      opacity: .5;
+      border-radius: 47%;
+      animation-duration: 10s;
+    }
+  
+  @keyframes rotate {
+    0% {transform: translate(-50%, 0) rotateZ(0deg);}
+    50% {transform: translate(-50%, -2%) rotateZ(180deg);}
+    100% {transform: translate(-50%, 0%) rotateZ(360deg);}
+  }
+
+  .foot-header{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    position: relative;
+}
+.foot-header::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #000;
+}
+.social{
+    position: relative;
+}
