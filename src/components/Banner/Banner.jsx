@@ -1,0 +1,39 @@
+import './banner.css'
+import {BsGithub} from 'react-icons/bs'
+import name from '../../assets/name-01.png'
+import play from '../../assets/playButton.png'
+import banner from '../../assets/RightBanner.png'
+import splash from '../../assets/rightSplash.png'
+import { Link } from 'react-router-dom'
+const Banner = () => {
+    return (
+        <div className='pt-20'>
+            <div className='my-container'>
+            <div className='md:flex '>
+                <div className='w-1/2'>
+                    <div className='splash'>
+                        <img  className='w-36' src={splash} alt="" />
+                    </div>
+                    <div className='short-line mb-3'></div>
+                    <h4 className='font-Gilroy font-bold text-3xl mb-2'>Hello, I am 👋</h4>
+                    <img className='w-[38rem]' src={name} alt="Name" />
+                    <p className='banner-line uppercase font-Montserrat'>a developer from <span className='last-word'>Bangladesh.</span></p>
+                    <div className="play-btn mt-16 flex items-center gap-4">
+                        <img className='w-[4rem]' src={play} alt="Button" />
+                        <p className='banner-btn font-Montserrat'>See my works 👉
+                        <Link><BsGithub className='inline ms-2 text-3xl' /></Link>
+                        </p>
+                    </div>
+                </div>
+                <div className='w-1/2'>
+                    <div className='banner'>
+                        <img className='w-full' src={banner} alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    );
+};
+
+export default Banner;

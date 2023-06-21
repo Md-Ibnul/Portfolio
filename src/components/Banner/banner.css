@@ -1,0 +1,52 @@
+
+.banner-line{
+    font-size: 16px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+.last-word{
+    color: #005018;
+}
+.banner-btn{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+.splash img {
+    position: relative;
+    animation-name: animateSplash;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes animateSplash {
+    0% {
+      transform: translate3d(0,-8px,0)
+    }
+  
+    to {
+      transform: translate3d(0,8px,0)
+    }
+  }
+  .banner img{
+    position: relative;
+    animation-name: animateBanner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  }
+  @keyframes animateBanner {
+    0% {
+      transform: translate3d(0,-16px,0)
+    }
+  
+    to {
+      transform: translate3d(0,16px,0)
+    }
+  }

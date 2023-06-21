@@ -1,0 +1,48 @@
+.heading{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+  }
+.tech-card{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px 2px #000;
+}
+.tech-card::before{
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animateCard 4s linear infinite;
+}
+.tech-card::after{
+    content: '';
+    position: absolute;
+    background: #fff;
+    inset: 4px;
+    border-radius: 16px;
+}
+@keyframes animateCard {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+.tech-card img {
+    filter: grayscale(100%);
+    transition: .3s;
+}
+.tech-card:hover img {
+    filter: none;
+    transform: scale(1.1);
+}
