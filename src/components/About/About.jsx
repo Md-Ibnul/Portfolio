@@ -5,6 +5,7 @@ import humble from '../../assets/humble.png'
 import heart from '../../assets/heartemoji.png'
 import crown from '../../assets/crown.png'
 import { Fade, Slide } from 'react-awesome-reveal'
+import { Link } from 'react-router-dom'
 
 const About = () => {
     return (
@@ -38,7 +39,9 @@ const About = () => {
                     <p className='font-Montserrat text-lg text-gray-600'>I am a passionate <span className='text-green-800'>MERN Developer</span> with a desire to learn and grow in a collaborative team environment. As a junior MERN Developer, I have a strong grasp of HTML5, CSS3, React.js, Node.js, Express.js, MongoDB, Firebase, and other robust tools, libraries and frameworks. This allows me to develop seamless and efficient web applications for an enhanced user experience. I stay up-to-date with the latest industry trends by exploring cutting-edge technologies like Next.js, TypeScript. By continuously expanding my skill set, I ensure I can deliver innovative solutions.</p>
                     </Fade>
                     <div className='text-center mt-4'>
-                        <button className='my-btn font-Montserrat'>See Resume</button>
+                        <button className='my-btn font-Montserrat'>
+                            <Link to="https://drive.google.com/file/d/15psvMQjs27P6nfn5wdHt70qjPWfz_lpk/view?usp=drive_link" rel="noreferrer" target={'_blank'}>See Resume</Link>
+                        </button>
                     </div>
                     </div>
                 </div>

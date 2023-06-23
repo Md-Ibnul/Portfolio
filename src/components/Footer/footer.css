@@ -183,12 +183,12 @@
 
 
 .social-icon--github .tooltip{
-  background: #4284c0;
+  background: #000;
   columns: currentColor;
 }
 /* icon after effect */
 .social-icon--github .tooltip::after{
-  border-top-color: #4284c0;
+  border-top-color: #000;
 }
 
 
@@ -196,5 +196,7 @@
 	.social-icon{
     width: 40px;
     height: 40px;
+    font-size: 1rem;
+    margin-left: 1rem;
   }
 }

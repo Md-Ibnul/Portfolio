@@ -1,39 +1,56 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { LuAlignRight } from "react-icons/lu";
 import { CgClose } from "react-icons/cg";
 import logo from "../../assets/logo-black-01.png";
+// import {NavHashLink as Link} from 'react-router-hash-link'
+import { Link,  } from 'react-scroll'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+        setTop(window.pageYOffset <= 20)
+    };
+    window.addEventListener('scroll', scrollHandler);
+    
+    // Explicit call so that the navbar gets blurred when component mounts 
+    scrollHandler(); 
+    
+    return () => {
+        window.removeEventListener('scroll', scrollHandler);
+    }
+}, []);
 
   return (
-    <div className="fixed z-50 w-full mx-auto">
-      <div className="bg-gray-100 bg-opacity-90 py-2 shadow-lg ">
+    <div className={`fixed z-50 w-full mx-auto ${!top && 'bg-white dark:bg-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur dark:backdrop-blur'}`} >
+      <div className="py-2 shadow-lg ">
     <div className=" relative flex justify-between items-center px-4 container">
       {/* logo section */}
       <Link to="/" className="inline-flex items-center my-3 ms-8">
-        <img className="w-32" src={logo} alt="" />
+        <img className="w-32" src={logo} alt="Logo" />
       </Link>
 
       {/* Nav items */}
 
       <ul className="items-center hidden space-x-8 md:flex">
         <li className="hover:text-red-500 duration-200 font-thin text-lg">
-          <NavLink
-            to="/"
+          <Link
+            to="/#home"
             className={({ isActive }) => (isActive ? "active" : "default")}
           >
             Home
-          </NavLink>
+          </Link>
         </li>
         <li className="hover:text-red-500 duration-200 font-thin text-lg">
-          <NavLink
-            to="/books"
-            className={({ isActive }) => (isActive ? "active" : "default")}
+          <Link  activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500} delay={1000}
+           
           >
-            About
-          </NavLink>
+            Contact
+          </Link>
         </li>
         <li className="hover:text-red-500 duration-200 font-thin text-lg">
           <NavLink

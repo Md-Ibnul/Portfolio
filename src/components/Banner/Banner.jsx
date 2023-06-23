@@ -5,7 +5,7 @@ import play from '../../assets/playButton.png'
 import banner from '../../assets/RightBanner.png'
 import splash from '../../assets/rightSplash.png'
 import { Link } from 'react-router-dom'
-import { JackInTheBox, Slide } from 'react-awesome-reveal'
+import { Slide } from 'react-awesome-reveal'
 const Banner = () => {
     return (
         <div className='pt-20'>
@@ -27,17 +27,15 @@ const Banner = () => {
                     <div className="play-btn mt-5 md:mt-16 flex items-center gap-4">
                         <img className='w-[4rem]' src={play} alt="Button" />
                         <p className='banner-btn font-Montserrat'>See my works 👉
-                        <Link><BsGithub className='inline ms-2 text-3xl' /></Link>
+                        <Link to="https://github.com/Md-Ibnul" rel="noreferrer" target={'_blank'}><BsGithub className='inline ms-2 text-3xl' /></Link>
                         </p>
                     </div>
                     </Slide>
                 </div>
                 <div className='w-full md:w-1/2'>
-                    <JackInTheBox>
                     <div className='banner' >
                         <img className='w-full' src={banner} alt="" />
                     </div>
-                    </JackInTheBox>
                 </div>
             </div>
         </div>
