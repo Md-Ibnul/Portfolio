@@ -7,7 +7,7 @@ import Tech from "../components/Tech/Tech";
 
 const Main = () => {
     return (
-        <div>
+        <div className="bg-white dark:bg-black">
             <Navbar />
             <Banner />
             <About />

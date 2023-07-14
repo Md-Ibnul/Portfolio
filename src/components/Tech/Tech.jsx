@@ -18,11 +18,11 @@ const Tech = () => {
         Aos.init({duration:500, easing: 'ease'})
     },[])
     return (
-        <div className='my-container'>
+        <div id='skills' className='my-container'>
             <div>
                 <div className="short-line"></div>
                 <Slide>
-                <h4 className='heading font-Gilroy uppercase'>TECH STACK</h4>
+                <h4 className='heading font-Gilroy uppercase dark:text-white'>TECH STACK</h4>
                 </Slide>
             </div>
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mt-16'>

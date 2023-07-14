@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 const Banner = () => {
     return (
-        <div className='pt-20'>
+        <div id='home' className='pt-20'>
             <div className='my-container'>
             <div className='md:flex '>
                 <div className='w-full md:w-1/2'>
@@ -16,17 +16,17 @@ const Banner = () => {
                         <img  className='w-36' src={splash} alt="" />
                     </div>
                     <div className='short-line mb-3'></div>
-                    <h4 className='font-Gilroy font-bold text-3xl mb-2'>Hello, I am 👋</h4>
+                    <h4 className='font-Gilroy font-bold text-3xl mb-2 dark:text-white'>Hello, I am <span className='hand'>👋🏻</span></h4>
                     <Slide>
                     <img className='w-[38rem]' src={name} alt="Name" />
                     </Slide>
                     <Slide delay={500}>
-                    <p className='banner-line uppercase font-Montserrat'>a developer from <span className='last-word'>Bangladesh.</span></p>
+                    <p className='banner-line uppercase font-Montserrat dark:text-white'>a developer from <span className='last-word'>Bangladesh.</span></p>
                     </Slide>
                     <Slide delay={900}>
                     <div className="play-btn mt-5 md:mt-16 flex items-center gap-4">
                         <img className='w-[4rem]' src={play} alt="Button" />
-                        <p className='banner-btn font-Montserrat'>See my works 👉
+                        <p className='banner-btn font-Montserrat dark:text-white'>See my works 👉
                         <Link to="https://github.com/Md-Ibnul" rel="noreferrer" target={'_blank'}><BsGithub className='inline ms-2 text-3xl' /></Link>
                         </p>
                     </div>

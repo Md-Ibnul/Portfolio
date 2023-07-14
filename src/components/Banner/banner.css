@@ -15,6 +15,24 @@
     font-weight: 700;
     color: #a4a4a4;
 }
+.hand{
+  position: relative;
+    animation-name: animateHand;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes animateHand {
+  0% {
+    transform: translate3d(0,-8px,0)
+  }
+
+  to {
+    transform: translate3d(0,8px,0)
+  }
+}
+
 .splash img {
     position: relative;
     animation-name: animateSplash;

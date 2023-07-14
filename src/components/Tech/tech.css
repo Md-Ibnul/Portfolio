@@ -26,7 +26,7 @@
 .tech-card::after{
     content: '';
     position: absolute;
-    background: #fff;
+    background: #e6e6e6;
     inset: 4px;
     border-radius: 16px;
 }
